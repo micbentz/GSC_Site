@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Setting max with of page content */
+/* Setting max width of page content */
 section {
     max-width: 1300px;
     margin: 0 auto;
