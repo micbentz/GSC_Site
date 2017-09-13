@@ -1,9 +1,11 @@
+/* User agent css reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Setting max with of page content */
 section {
     max-width: 1300px;
     margin: 0 auto;
