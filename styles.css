@@ -7,13 +7,39 @@
 
 /* Setting max width of page content */
 section {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 header {
-    background-color: #CDCDE2;
+    background-color: rgba(22, 22, 25, 0.9);
+    padding: 1rem 0.6rem;
+}
+
+.header-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
     text-align: center;
+    font-variant:small-caps;
+    color: whitesmoke;
+}
+
+.media-links {
+    padding: 0.5rem 0 0 0;
+}
+
+.media-links a {
+    font-size: 24px;
+    max-width: 48px;
+    max-height: 48px;
+    margin: 0 0.4rem 0 0;
+    color: whitesmoke;
+}
+
+.media-links a:hover {
+    color: #00529b;
 }
 
 footer {
