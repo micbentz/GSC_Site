@@ -68,10 +68,13 @@ header {
     max-width: 360px;
     max-height: 500px;
     margin: 15% auto; /* 20% from the top and centered */
-    padding: 20px;
+    padding: 20px 0;
     background: whitesmoke;
     border: 1px solid #888;
     border-radius: 7px;
+}
+
+#datepicker {
 }
 
 

@@ -8,25 +8,29 @@
             </div>
             <li>
                 <label>Organization <span class="required">*</span></label>
-                <input type="text" name="field1" class="field-long" placeholder="First" /></li>
-            <li>
-                <label>Email <span class="required">*</span></label>
-                <input type="email" name="field3" class="field-long" />
-            </li>
+                <input type="text" name="org" class="field-long" placeholder="GSC" /></li>
             <li>
                 <label>Requesting</label>
-                <select name="field4" class="field-select">
-                <option value="Teach">Teach</option>
-                <option value="Perform">Perform</option>
-                <option value="General Question">General</option>
+                <select name="request" class="field-select">
+                <option value="teaching">Teach</option>
+                <option value="terforming">Perform</option>
+                <option value="general">General</option>
                 </select>
             </li>
             <li>
-                <label>Your Message <span class="required">*</span></label>
-                <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+                <label>Date</label>
+                <input type="text" name="date" id="datepicker">
             </li>
             <li>
-                <input type="submit" value="Submit" />
+                <label>Your Message <span class="required">*</span></label>
+                <textarea 
+                    name="message" 
+                    id="field5" 
+                    class="field-long field-textarea">Can you teach us the dancing?
+                </textarea>
+            </li>
+            <li>
+                <input id="submit" type="submit" value="Submit" />
             </li>
         </ul>
     </div>
@@ -68,7 +72,6 @@
     .form-style-1 input[type=search],
     .form-style-1 input[type=time],
     .form-style-1 input[type=url],
-    .form-style-1 input[type=email],
     textarea, 
     select{
         box-sizing: border-box;
@@ -90,7 +93,6 @@
     .form-style-1 input[type=search]:focus,
     .form-style-1 input[type=time]:focus,
     .form-style-1 input[type=url]:focus,
-    .form-style-1 input[type=email]:focus,
     .form-style-1 textarea:focus, 
     .form-style-1 select:focus{
         -moz-box-shadow: 0 0 8px #217ECF;
