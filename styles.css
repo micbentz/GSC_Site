@@ -43,6 +43,7 @@ header {
     max-height: 48px;
     margin: 0 0.4rem 0 0;
     color: whitesmoke;
+    text-decoration: none;
 }
 
 .media-links a:hover {
@@ -73,10 +74,6 @@ header {
     border: 1px solid #888;
     border-radius: 7px;
 }
-
-#datepicker {
-}
-
 
 /* FOOTER */
 footer {
