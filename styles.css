@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: whitesmoke;
 }
 
 /* Setting max width of page content */
@@ -23,7 +24,6 @@ header {
     justify-content: space-between;
     text-align: center;
     font-variant:small-caps;
-    color: whitesmoke;
 }
 
 .media-links {
@@ -39,7 +39,7 @@ header {
 }
 
 .media-links a:hover {
-    color: #00529b;
+    color: #217ECF;
 }
 
 footer {
@@ -47,8 +47,20 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
+    padding: 1rem 0.6rem;
+    font-family: 'Amatic SC', cursive;
     text-align: center;
-    background-color: #CDCDE2;
+    font-variant: small-caps;
+    font-size: 1.2rem;
+    background-color: rgba(22, 22, 25, 0.9);
+}
+
+footer i {
+    padding: 0 0.5rem;
+}
+
+footer p:hover {
+    color: #E5A536;
 }
 
 /* Getting bigger than iPhone 6+ */
