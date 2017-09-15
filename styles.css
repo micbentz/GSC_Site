@@ -6,12 +6,6 @@
     color: whitesmoke;
 }
 
-/* Setting max width of page content */
-section {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 header {
     background-color: rgba(22, 22, 25, 0.9);
     padding: 1rem 0.6rem;
@@ -40,6 +34,36 @@ header {
 
 .media-links a:hover {
     color: #217ECF;
+}
+
+/* Setting max width of page content */
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: black;
+}
+.main_img {
+    max-width: 100%;
+}
+
+.margin_spacing_vert {
+    margin: 20px auto;
+
+}
+
+.container_left {
+    background-color: black;
+    padding: 50px;
+}
+
+.container_center {
+    background-color: red;
+    padding: 50px;
+}
+
+.container_right {
+    background-color: gold;
+    padding: 50px;
 }
 
 footer {
