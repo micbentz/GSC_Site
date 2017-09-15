@@ -9,56 +9,89 @@ $(document).ready(function () {
      * OVERLAY
      */
 
-    // Load in the overlay so that it can be shown later
+    // load in the overlay so that it can be shown later
     $('.overlay-container').load('./request_overlay/request_overlay.html', function() {
         // Create the datepicker
         $('#datepicker').datepicker();
     });
 
-    // 
+    // trigger the overlay
     $('.trigger-modal').click(function() {
        showOverlay();
     });
 
-    // Hide the overlay
+    // event listener to close the overlay
     $('.overlay-container').on('click','#close',function() {
         hideOverlay();
     });
 
-    // Capturing clicks outside the overlay content
-    // to hide the overlay
+    // event listener to check if click happens outside the overlay
     $(document).on('click','.overlay', function(event) {
-        // console.log(event);
         if (event.target.className === 'overlay') {
             hideOverlay();
         }
     });
 
-    // Sending email
+    // on submitting the form
     $('.overlay-container').on('click','#submit', function(event) {
         event.preventDefault();
+        
+        // user inputs
         let organization = $("input[name='org']").val();
         let request = $("select[name='request']").val();
         let date = $("input[name='date']").val();
         let emailBody = $("textarea[name='message']").val();
-        let subject = `${organization} inquiring about ${request} on ${date}`;
-        console.log(subject);
-        // window.location = 'mailto:' + GSC_EMAIL + '?subject=' + subject + '&body=' +   emailBody;
-        hideOverlay();
+
+        // check if the form is valid
+        if (validForm(organization, request, date, emailBody)) {
+            let subject = `${organization} inquiring about ${request} on ${date}`;
+            window.location = 'mailto:' + GSC_EMAIL + '?subject=' + subject + '&body=' +   emailBody;
+            hideOverlay();
+        } else {
+            checkInputs();
+        }
     });
 
+    // event listener to check for input changes
+    $('.overlay-container').on('change' ,'.overlay-content', function() {
+       checkInputs();
+    });
+
+    // check if the form is valid
+    function validForm(...results) {
+        results.forEach((cur) => {
+            console.log(cur.length);
+            if (cur.length < 3) result = false;
+        });
+        return result;
+    }
+
+    // check if the inputs are valid
+    function checkInputs() {
+        $('input, textarea').blur(function() {
+            if ($(this).val().length < 1) {
+                $(this).addClass('error');
+            } else {
+                $(this).removeClass('error');
+            }
+        });
+    }
+
+    // shows the overlay
     function showOverlay() {
         $('.overlay').css('display','block');
         $('.overlay-content').slideDown(1000, function() {
             console.log('finished FADING IN');
         });
-        // $('.main').hide();
     }
 
+    // hides the overlay
     function hideOverlay() {
         $('.overlay-content').slideUp(1000, function() {
             $('.overlay').css('display','none');
         });
-        // $('.main').show();
+        $('input, textarea').each(function() {
+            $(this).removeClass('error');
+        });
     }
 });

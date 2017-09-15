@@ -75,6 +75,11 @@ header {
     border-radius: 7px;
 }
 
+.error {
+    box-shadow: 0 0 8px #D2353B;
+    border: 1px solid #D2353B;
+}
+
 /* FOOTER */
 footer {
     position: fixed;
