@@ -48,7 +48,14 @@ $(document).ready(function () {
             window.location = 'mailto:' + GSC_EMAIL + '?subject=' + subject + '&body=' +   emailBody;
             hideOverlay();
         } else {
-            checkInputs();
+            // validate inputs
+            $('input, textarea').each(function() {
+                if ($(this).val().length < 1) {
+                    $(this).addClass('error');
+                } else {
+                    $(this).removeClass('error');
+                }
+            });
         }
     });
 
