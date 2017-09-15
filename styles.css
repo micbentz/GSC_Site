@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: whitesmoke;
 }
 
 /* Setting max width of page content */
@@ -11,6 +10,13 @@ section {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+body {
+    height: 100%;
+    /* background: rgb(57, 6, 6); */
+}
+
+/* NAVBAR */
 
 header {
     background-color: rgba(22, 22, 25, 0.9);
@@ -24,6 +30,7 @@ header {
     justify-content: space-between;
     text-align: center;
     font-variant:small-caps;
+    color:whitesmoke;
 }
 
 .media-links {
@@ -42,6 +49,33 @@ header {
     color: #217ECF;
 }
 
+/* OVERLAY */
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.overlay-content {
+    display: none;
+    width: 90%;
+    max-width: 360px;
+    max-height: 500px;
+    margin: 20% auto; /* 20% from the top and centered */
+    padding: 20px;
+    background: whitesmoke;
+    border: 1px solid #888;
+    border-radius: 7px;
+}
+
+
+/* FOOTER */
 footer {
     position: fixed;
     bottom: 0;
@@ -53,6 +87,7 @@ footer {
     font-variant: small-caps;
     font-size: 1.2rem;
     background-color: rgba(22, 22, 25, 0.9);
+    color:whitesmoke;
 }
 
 footer i {
