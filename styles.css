@@ -6,7 +6,7 @@
 }
 
 /* Setting max width of page content */
-section {
+section .main{
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -67,7 +67,7 @@ header {
     width: 90%;
     max-width: 360px;
     max-height: 500px;
-    margin: 20% auto; /* 20% from the top and centered */
+    margin: 15% auto; /* 20% from the top and centered */
     padding: 20px;
     background: whitesmoke;
     border: 1px solid #888;

@@ -12,7 +12,7 @@ $(document).ready(function () {
      */
 
     // Load in the overlay so that it can be shown later
-    $('.overlay-container').load('./request_survey/request_survey.html');
+    $('.overlay-container').load('./request_overlay/request_overlay.html');
 
     // 
     $('.trigger-modal').click(function() {
