@@ -51,19 +51,31 @@ header {
 
 }
 
-.container_left {
-    background-color: black;
-    padding: 50px;
+.main_text {
+    text-align: center;
 }
 
-.container_center {
-    background-color: red;
-    padding: 50px;
+.flex_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.container_right {
-    background-color: gold;
-    padding: 50px;
+.instructor_imgs {
+    max-width: 175px;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 650px) {
+    .instructor_imgs {
+        max-width: 210px;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .instructor_imgs {
+        max-width: 240px;
+    }
 }
 
 footer {
