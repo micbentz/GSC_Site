@@ -46,13 +46,13 @@ header {
     max-width: 100%;
 }
 
-.margin_spacing_vert {
+.text_margins > * {
     margin: 20px auto;
-
 }
 
-.main_text {
+.text_format {
     text-align: center;
+    color: whitesmoke;
 }
 
 .flex_container {
