@@ -45,6 +45,7 @@ $(document).ready(function () {
         // check if the form is valid
         if (validForm(organization, request, date, emailBody)) {
             let subject = `${organization} inquiring about ${request} on ${date}`;
+            console.log(`Form is valid. Subject line is: ${subject}`);
             window.location = 'mailto:' + GSC_EMAIL + '?subject=' + subject + '&body=' +   emailBody;
             hideOverlay();
         } else {
@@ -66,11 +67,15 @@ $(document).ready(function () {
 
     // check if the form is valid
     function validForm(...results) {
+        console.log('checking if the form is valid');
         results.forEach((cur) => {
-            console.log(cur.length);
-            if (cur.length < 3) result = false;
+            // console.log(cur.length);
+            if (cur.length < 3) {
+                console.log(`${cur} is not valid`);
+                return false;
+            }
         });
-        return result;
+        return true;
     }
 
     // check if the inputs are valid
