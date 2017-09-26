@@ -9,16 +9,23 @@ const GSC_EMAIL = 'gatorsalsaclub@gmail.com';
 $(document).ready(function () {
 
     /**
+     * CHECK FOR WIDTH TO RESIZE HEADER
+     */
+    resizeHeader();
+    
+
+    /**
      * RESPONSIVE CONTAINER FOR HEADER
      */
      $(window).on('resize', function() {
-        var win = $(this);
-        if (win.width() < 930) {
-            console.log('resizing');
-            let newHeight = win.width() * 0.5;
-            $('header').height(newHeight);
-            // console.log('setting header height to: ' + newHeight);
-        }
+         resizeHeader();
+        // var win = $(this);
+        // if (win.width() < 930) {
+        //     console.log('resizing');
+        //     let newHeight = win.width() * 0.5;
+        //     $('header').height(newHeight);
+        //     // console.log('setting header height to: ' + newHeight);
+        // }
      });
 
     /**
@@ -122,5 +129,15 @@ $(document).ready(function () {
         $('input, textarea').each(function() {
             $(this).removeClass('error');
         });
+    }
+
+    function resizeHeader() {
+        var win = $(window);
+        if (win.width() < 930) {
+            console.log('resizing');
+            let newHeight = win.width() * 0.5;
+            $('header').height(newHeight);
+            // console.log('setting header height to: ' + newHeight);
+        }
     }
 });
