@@ -206,7 +206,7 @@ footer {
     font-size: 12px;
 }
 
-ul {
+.footer-content ul {
     width: 100%;
     text-align: left;
     margin-top: 20px;
@@ -233,8 +233,8 @@ footer p:hover {
 }
 
 /* Getting bigger than iPhone 7+ */
-@media screen and (min-width: 420px) {
-    ul {
+@media screen and (min-width: 421px) {
+    .footer-content > ul {
         width: fit-content;
         text-align: center;
     }
