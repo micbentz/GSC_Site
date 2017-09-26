@@ -83,15 +83,16 @@ $(document).ready(function () {
 
     // check if the form is valid
     function validForm(...results) {
+        let result = true;
         console.log('checking if the form is valid');
         results.forEach((cur) => {
             // console.log(cur.length);
             if (cur.length < 3) {
                 console.log(`${cur} is not valid`);
-                return false;
+                result = false;
             }
         });
-        return true;
+        return result;
     }
 
     // check if the inputs are valid
