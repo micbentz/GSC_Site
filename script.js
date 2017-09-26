@@ -12,7 +12,7 @@ $(document).ready(function () {
      * CHECK FOR WIDTH TO RESIZE HEADER
      */
     resizeHeader();    
-
+    $('#datepicker').datepicker();
     /**
      * RESPONSIVE CONTAINER FOR HEADER
      */
@@ -32,10 +32,10 @@ $(document).ready(function () {
      */
 
     // load in the overlay so that it can be shown later
-    $('.overlay-container').load('./request_overlay/request_overlay.html', function() {
-        // Create the datepicker
-        $('#datepicker').datepicker();
-    });
+    // $('.overlay-container').load('./request_overlay/request_overlay.html', function() {
+    //     // Create the datepicker
+    //     $('#datepicker').datepicker();
+    // });
 
     // trigger the overlay
     $('.open-request').click(function() {

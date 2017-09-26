@@ -15,7 +15,42 @@
 <html>
     <body>
     <div class="overlay-container">
-        </div>
+        <section class="overlay">            
+            <div class="overlay-content">
+                <ul class="form-style-1">
+                    <div class="overlay-info">
+                        <h1>Request Form</h1>
+                        <i id="close" class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                    <li>
+                        <label>Organization <span class="required">*</span></label>
+                        <input type="text" name="org" class="field-long" placeholder="Club XYZ" /></li>
+                    <li>
+                        <label>Requesting</label>
+                        <select name="request" class="field-select">
+                        <option value="teaching">Teach</option>
+                        <option value="terforming">Perform</option>
+                        <option value="general">General</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Date</label>
+                        <input type="text" name="date" id="datepicker">
+                    </li>
+                    <li>
+                        <label>Your Message <span class="required">*</span></label>
+                        <textarea
+                            placeholder="Can you teach us the dancing?" 
+                            name="message" 
+                            class="field-long field-textarea"></textarea>
+                    </li>
+                    <li>
+                        <input id="submit" type="submit" value="Submit" />
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
     <header>
         <div class="responsive-container">
             <div class="header-content">
