@@ -6,6 +6,20 @@ const MODAL_BACKGROUND = '#808080';
 const GSC_EMAIL = 'gatorsalsaclub@gmail.com';
 
 $(document).ready(function () {
+
+    /**
+     * RESPONSIVE CONTAINER FOR HEADER
+     */
+     $(window).on('resize', function() {
+        var win = $(this);
+        if (win.width() < 930) {
+            console.log('resizing');
+            let newHeight = win.width() * 0.5;
+            $('header').height(newHeight);
+            // console.log('setting header height to: ' + newHeight);
+        }
+     });
+
     /**
      * OVERLAY
      */
