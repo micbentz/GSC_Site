@@ -76,6 +76,7 @@ header {
     max-width: 100%;
 }
 
+
 /* Map and paragraphs */
 
 .par_map_flex {
@@ -144,6 +145,22 @@ header {
 }
 
 /* OVERLAY */
+
+.open-request {
+    position: fixed;
+    right: -30px;
+    top: 230px;
+    transform: rotate(270deg);
+    color: whitesmoke;
+    background-color: #f37021;
+    padding: 10px 10px 35px 10px;
+    border-radius: 5px;
+}
+
+.open-request:hover {
+    transform: rotate(270deg) scale(1.2);
+}
+
 .overlay {
     display: none;
     position: fixed;
@@ -161,7 +178,7 @@ header {
     width: 90%;
     max-width: 360px;
     max-height: 500px;
-    margin: 15% auto; /* 20% from the top and centered */
+    margin: 100px auto auto auto; /* 20% from the top and centered */
     padding: 20px 0;
     background: whitesmoke;
     border: 1px solid #888;

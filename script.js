@@ -1,6 +1,7 @@
 console.log('hello world');
 
 const UF_BLUE = '#00529b'
+const UF_ORANGE = '#f37021';
 const UF_BLUE_RANGE = ['#f0f8ff', '#8ac8ff', '#007ff0', '#00529b', '#002546', '#001324'];
 const MODAL_BACKGROUND = '#808080';
 const GSC_EMAIL = 'gatorsalsaclub@gmail.com';
@@ -31,7 +32,7 @@ $(document).ready(function () {
     });
 
     // trigger the overlay
-    $('.trigger-modal').click(function() {
+    $('.open-request').click(function() {
        showOverlay();
     });
 
