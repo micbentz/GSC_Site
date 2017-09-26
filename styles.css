@@ -6,28 +6,19 @@
     font-family: 'PT Sans', sans-serif;
 }
 
-/* Setting max width of page content */
-/* section .main{
-    max-width: 1200px;
-    margin: 0 auto;
-} */
-
 body {
     height: 100%;
-    /* background: rgb(57, 6, 6); */
 }
 
 /* NAVBAR */
-
 header {
-    max-height: 460px;
     width: 100%;
     height: 460px;
+    max-height: 460px;
 }
 
 .responsive-container {
     width: 100%;
-    /* height: 100%; */
     height: 100%;
     background-color: rgba(22, 22, 25, 0.9);
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./photos/GSC_extrav.jpg');
@@ -89,11 +80,11 @@ header {
 }
 
 .article_margins >*{
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .map_margins {
-    margin: 20px;
+    margin: 20px 0;
 }
 
 @media screen and (min-width: 551px) {
@@ -194,16 +185,14 @@ header {
 
 /* FOOTER */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
+    margin-top: 15px;
     padding: 1rem 0.6rem;
     font-family: 'Amatic SC', cursive;
     text-align: center;
     font-variant: small-caps;
     font-size: 1.2rem;
-    background-color: rgba(22, 22, 25, 0.9);
+    background-color: #001324;
     color:whitesmoke;
 }
 
@@ -223,5 +212,21 @@ footer p:hover {
     }
     .media-links {
         padding: 0;
+    }
+}
+
+/* When the viewport is less than 1200 
+ then add a margin to the main section
+ and header */
+@media screen and (max-width: 1199px) {
+    .header-content {
+        margin: 0 20px;
+    }
+    .article_margins >*{
+        margin: 20px;
+    }
+    
+    .map_margins {
+        margin: 20px;
     }
 }
