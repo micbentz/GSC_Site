@@ -3,32 +3,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
 }
-
-/* Setting max width of page content */
-/* section .main{
-    max-width: 1200px;
-    margin: 0 auto;
-} */
 
 body {
     height: 100%;
-    /* background: rgb(57, 6, 6); */
 }
 
 /* NAVBAR */
-
 header {
-    background-color: rgba(22, 22, 25, 0.9);
-    padding: 1rem 0.6rem;
+    width: 100%;
+    height: 460px;
+    max-height: 460px;
 }
 
-.header-container{
+.responsive-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 22, 25, 0.9);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./photos/GSC_extrav.jpg');
+    background-position: center top;
+    background-size: cover;
+}
+
+.header-content{
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    align-items: center;
+    font-size: 27px;
     font-variant:small-caps;
     color:whitesmoke;
 }
@@ -38,16 +42,17 @@ header {
 }
 
 .media-links a {
+    vertical-align: center;
     font-size: 24px;
-    max-width: 48px;
-    max-height: 48px;
     margin: 0 0.4rem 0 0;
     color: whitesmoke;
     text-decoration: none;
+    transition: all 0.3s ease-out;
 }
 
 .media-links a:hover {
     color: #217ECF;
+    transform: scale(1.3);
 }
 
 /* MAIN */
@@ -56,11 +61,13 @@ header {
 .main {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: black;
+    background-color: #FEFEFE;
+    color: black;
 }
 .main_img {
     max-width: 100%;
 }
+
 
 /* Map and paragraphs */
 
@@ -68,16 +75,16 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    color: whitesmoke;
+    /* color: whitesmoke; */
     text-align: center;
 }
 
 .article_margins >*{
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .map_margins {
-    margin: 20px;
+    margin: 20px 0;
 }
 
 @media screen and (min-width: 551px) {
@@ -100,7 +107,7 @@ header {
 /* Instructor imgs */
 
 .text_format >* {
-    color: whitesmoke;
+    /* color: whitesmoke; */
     text-align: center;
     margin-top: 20px;
 }
@@ -110,7 +117,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
-    /* color: whitesmoke;  */
 }
 
 .instructor_imgs {
@@ -131,6 +137,23 @@ header {
 }
 
 /* OVERLAY */
+
+.open-request {
+    position: fixed;
+    right: -30px;
+    top: 230px;
+    transform: rotate(270deg);
+    color: whitesmoke;
+    background-color: #f37021;
+    padding: 10px 10px 35px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in;
+}
+
+.open-request:hover {
+    transform: rotate(270deg) scale(1.2);
+}
+
 .overlay {
     display: none;
     position: fixed;
@@ -148,7 +171,7 @@ header {
     width: 90%;
     max-width: 360px;
     max-height: 500px;
-    margin: 15% auto; /* 20% from the top and centered */
+    margin: 100px auto auto auto; /* 20% from the top and centered */
     padding: 20px 0;
     background: whitesmoke;
     border: 1px solid #888;
@@ -162,16 +185,14 @@ header {
 
 /* FOOTER */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
+    margin-top: 15px;
     padding: 1rem 0.6rem;
     font-family: 'Amatic SC', cursive;
     text-align: center;
     font-variant: small-caps;
     font-size: 1.2rem;
-    background-color: rgba(22, 22, 25, 0.9);
+    background-color: #001324;
     color:whitesmoke;
 }
 
@@ -186,10 +207,26 @@ footer p:hover {
 /* Getting bigger than iPhone 6+ */
 @media screen and (min-width: 420px) {
     .media-links a {
-        font-size: 36px;
+        font-size: 30px;
         margin: 0 0.5rem;
     }
     .media-links {
         padding: 0;
+    }
+}
+
+/* When the viewport is less than 1200 
+ then add a margin to the main section
+ and header */
+@media screen and (max-width: 1199px) {
+    .header-content {
+        margin: 0 20px;
+    }
+    .article_margins >*{
+        margin: 20px;
+    }
+    
+    .map_margins {
+        margin: 20px;
     }
 }

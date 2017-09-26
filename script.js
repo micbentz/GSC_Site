@@ -1,10 +1,33 @@
 console.log('hello world');
 
 const UF_BLUE = '#00529b'
+const UF_ORANGE = '#f37021';
+const UF_BLUE_RANGE = ['#f0f8ff', '#8ac8ff', '#007ff0', '#00529b', '#002546', '#001324'];
 const MODAL_BACKGROUND = '#808080';
 const GSC_EMAIL = 'gatorsalsaclub@gmail.com';
 
 $(document).ready(function () {
+
+    /**
+     * CHECK FOR WIDTH TO RESIZE HEADER
+     */
+    resizeHeader();
+    
+
+    /**
+     * RESPONSIVE CONTAINER FOR HEADER
+     */
+     $(window).on('resize', function() {
+         resizeHeader();
+        // var win = $(this);
+        // if (win.width() < 930) {
+        //     console.log('resizing');
+        //     let newHeight = win.width() * 0.5;
+        //     $('header').height(newHeight);
+        //     // console.log('setting header height to: ' + newHeight);
+        // }
+     });
+
     /**
      * OVERLAY
      */
@@ -16,7 +39,7 @@ $(document).ready(function () {
     });
 
     // trigger the overlay
-    $('.trigger-modal').click(function() {
+    $('.open-request').click(function() {
        showOverlay();
     });
 
@@ -45,6 +68,7 @@ $(document).ready(function () {
         // check if the form is valid
         if (validForm(organization, request, date, emailBody)) {
             let subject = `${organization} inquiring about ${request} on ${date}`;
+            console.log(`Form is valid. Subject line is: ${subject}`);
             window.location = 'mailto:' + GSC_EMAIL + '?subject=' + subject + '&body=' +   emailBody;
             hideOverlay();
         } else {
@@ -66,9 +90,14 @@ $(document).ready(function () {
 
     // check if the form is valid
     function validForm(...results) {
+        let result = true;
+        console.log('checking if the form is valid');
         results.forEach((cur) => {
-            console.log(cur.length);
-            if (cur.length < 3) result = false;
+            // console.log(cur.length);
+            if (cur.length < 3) {
+                console.log(`${cur} is not valid`);
+                result = false;
+            }
         });
         return result;
     }
@@ -100,5 +129,15 @@ $(document).ready(function () {
         $('input, textarea').each(function() {
             $(this).removeClass('error');
         });
+    }
+
+    function resizeHeader() {
+        var win = $(window);
+        if (win.width() < 930) {
+            console.log('resizing');
+            let newHeight = win.width() * 0.5;
+            $('header').height(newHeight);
+            // console.log('setting header height to: ' + newHeight);
+        }
     }
 });
