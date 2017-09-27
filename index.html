@@ -15,7 +15,42 @@
 <html>
     <body>
     <div class="overlay-container">
-        </div>
+        <section class="overlay">            
+            <div class="overlay-content">
+                <ul class="form-style-1">
+                    <div class="overlay-info">
+                        <h1>Request Form</h1>
+                        <i id="close" class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                    <li>
+                        <label>Organization <span class="required">*</span></label>
+                        <input type="text" name="org" class="field-long" placeholder="Club XYZ" /></li>
+                    <li>
+                        <label>Requesting</label>
+                        <select name="request" class="field-select">
+                        <option value="teaching">Teach</option>
+                        <option value="terforming">Perform</option>
+                        <option value="general">General</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Date</label>
+                        <input type="text" name="date" id="datepicker">
+                    </li>
+                    <li>
+                        <label>Your Message <span class="required">*</span></label>
+                        <textarea
+                            placeholder="Can you teach us the dancing?" 
+                            name="message" 
+                            class="field-long field-textarea"></textarea>
+                    </li>
+                    <li>
+                        <input id="submit" type="submit" value="Submit" />
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
     <header>
         <div class="responsive-container">
             <div class="header-content">
@@ -34,45 +69,82 @@
         </div>
         <!-- <img class="main_img" src ="photos/GSC_extrav.jpg" alt="GSC Extravaganza attendees"> -->
         <section class="par_map_flex">
-            <span class="article_margins">
+            <div class="article_margins">
                 <article>
                     <h3>Who We Are</h3>
-                    <p>Paragraph space, how 'bou dat</p>
+                    <p>Vitae fames tincidunt eleifend id etiam. Magna lacus turpis eros aliquam. Porta donec suspendisse per hac mi sapien lorem. </p>
                 </article>
                 <article>
                     <h3>Our Instructors</h3>
-                    <p>Blabitty blah, Propuesta Indecente</p>
+                    <p> Nulla class auctor adipiscing netus erat. Massa justo condimentum cum rutrum ultrices cras sem. Fames nulla vel nisi. Purus metus quam.</p>
                 </article>
-            </span>
+            </div>
             <div class="map_margins">
                 <h3>Location</h3>
+                <p>Massa magna ligula magnis urna id. Fusce etiam tristique leo porttitor ligula at fermentum vitae. Nulla ipsum nullam fringilla ac in ultricies in ullamcorper ut mauris consectetuer ultricies lacus.</p>
                 <img class="map_img" src="photos/USAmap.jpeg" alt="Map of the USA">
             </div>
         </section>
         <section class="text_format">
-            <h2>Head Instructors</h2>
+            <h3>Head Instructors</h2>
             <div class="flex_container">
                 <figure>
-                    <img class="instructor_imgs" src="photos/2002 Mustang Sand.jpg" alt="mustang pic">
+                    <!-- <img class="instructor_imgs" src="photos/2002 Mustang Sand.jpg" alt="mustang pic"> -->
                     <figcaption>Instructor Name</figcaption>
                 </figure>
                 <figure>
-                    <img class="instructor_imgs" src="photos/2002 Mustang Sand.jpg" alt="mustang pic">
+                    <!-- <img class="instructor_imgs" src="photos/2002 Mustang Sand.jpg" alt="mustang pic"> -->
                     <figcaption>Instructor Name</figcaption>
                 </figure>
                 <figure>
-                    <img class="instructor_imgs" src="photos/2002 Mustang Sand.jpg" alt="mustang pic">
+                    <!-- <img class="instructor_imgs" src="photos/2002 Mustang Sand.jpg" alt="mustang pic"> -->
+                    <figcaption>Instructor Name</figcaption>
+                </figure>
+                <figure>
+                    <!-- <img class="instructor_imgs" src="photos/2002 Mustang Sand.jpg" alt="mustang pic"> -->
+                    <figcaption>Instructor Name</figcaption>
+                </figure>
+                <figure>
+                    <!-- <img class="instructor_imgs" src="photos/2002 Mustang Sand.jpg" alt="mustang pic"> -->
+                    <figcaption>Instructor Name</figcaption>
+                </figure>
+                <figure>
+                    <!-- <img class="instructor_imgs" src="photos/2002 Mustang Sand.jpg" alt="mustang pic"> -->
                     <figcaption>Instructor Name</figcaption>
                 </figure>
             </div>
         </section>
     </main>  
     <footer>
-        <p>
-            <i class="fa fa-headphones" aria-hidden="true"></i>
-            R&B 2017
-            <i class="fa fa-headphones" aria-hidden="true"></i>
-        </p>
+        <section class="footer-container">
+            <div class="footer-content">
+                <ul>
+                    <h1>Other</h1>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul>
+                    <h1>Events</h1>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul>
+                    <h1>Contact Us</h1>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                    Sean Riordan & Michael Bentz. All Rights Reserved 2017. [R&B] 
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                </p>
+            </div>
+        </section>
     </footer>
     </body>
 </html>
